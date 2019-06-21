@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NailsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tb_event">
+          <Key>
+            <PropertyRef Name="ma_e" />
+          </Key>
+          <Property Name="ma_e" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ten_e" Type="nvarchar" MaxLength="150" />
+          <Property Name="gia_full" Type="char" MaxLength="10" />
+          <Property Name="gia_fill" Type="char" MaxLength="10" />
+          <Property Name="hienthi" Type="char" MaxLength="1" />
+          <Property Name="noidung_e" Type="ntext" />
+          <Property Name="tieude_e" Type="ntext" />
+          <Property Name="path" Type="ntext" />
+        </EntityType>
+        <EntityType Name="tb_service1">
+          <Key>
+            <PropertyRef Name="ma_dvc1" />
+          </Key>
+          <Property Name="ma_dvc1" Type="int" Nullable="false" />
+          <Property Name="ten_dvc1" Type="nvarchar" MaxLength="150" />
+          <Property Name="gia_full" Type="char" MaxLength="10" />
+          <Property Name="gia_fill" Type="char" MaxLength="10" />
+          <Property Name="hienthi" Type="char" MaxLength="1" />
+          <Property Name="ma_dv" Type="int" />
+          <Property Name="noidungdv1" Type="ntext" />
+        </EntityType>
+        <EntityType Name="tb_service2">
+          <Key>
+            <PropertyRef Name="ma_dvc2" />
+          </Key>
+          <Property Name="ma_dvc2" Type="int" Nullable="false" />
+          <Property Name="ten_dvc2" Type="nvarchar" MaxLength="150" />
+          <Property Name="gia_full" Type="char" MaxLength="15" />
+          <Property Name="gia_fill" Type="char" MaxLength="15" />
+          <Property Name="hienthi" Type="char" MaxLength="1" />
+          <Property Name="ma_dv" Type="int" />
+          <Property Name="ma_dvc1" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_servicedetails">
+          <Key>
+            <PropertyRef Name="ma_dvct" />
+          </Key>
+          <Property Name="ma_dvct" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ma_dv" Type="int" />
+          <Property Name="gia_dv" Type="int" />
+          <Property Name="gia_dv_full" Type="int" />
+          <Property Name="gia_dv_fill" Type="int" />
+          <Property Name="hienthi" Type="char" MaxLength="1" />
+          <Property Name="ten_dvct" Type="ntext" />
+          <Property Name="ghichu" Type="ntext" />
+          <Property Name="path" Type="ntext" />
+        </EntityType>
+        <EntityType Name="tbl_about">
+          <Key>
+            <PropertyRef Name="id_about" />
+          </Key>
+          <Property Name="id_about" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="noidung" Type="ntext" />
+          <Property Name="path" Type="ntext" />
+          <Property Name="hienthi" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="tbl_aboutus">
+          <Key>
+            <PropertyRef Name="id_aboutus" />
+          </Key>
+          <Property Name="id_aboutus" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="noidungc1" Type="ntext" />
+          <Property Name="path" Type="ntext" />
+          <Property Name="hienthi" Type="char" MaxLength="1" />
+          <Property Name="noidungc2" Type="ntext" />
+        </EntityType>
+        <EntityType Name="tbl_Admin">
+          <Key>
+            <PropertyRef Name="IDService" />
+          </Key>
+          <Property Name="IDService" Type="int" Nullable="false" />
+          <Property Name="Service" Type="ntext" />
+          <Property Name="Service1" Type="ntext" />
+          <Property Name="Service2" Type="ntext" />
+        </EntityType>
+        <EntityType Name="tbl_banner">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="path" Type="ntext" />
+          <Property Name="noidung1" Type="ntext" />
+          <Property Name="noidung2" Type="ntext" />
+          <Property Name="hienthi" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="tbl_contact">
+          <Key>
+            <PropertyRef Name="id_contact" />
+          </Key>
+          <Property Name="id_contact" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="ntext" />
+          <Property Name="Email" Type="ntext" />
+          <Property Name="Subject" Type="ntext" />
+          <Property Name="Massage" Type="ntext" />
+        </EntityType>
+        <EntityType Name="tbl_gallery">
+          <Key>
+            <PropertyRef Name="IDGallery" />
+          </Key>
+          <Property Name="IDGallery" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="path" Type="ntext" />
+          <Property Name="path1" Type="ntext" />
+          <Property Name="hienthi" Type="char" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Nails.dbo.tbl_home' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tbl_home">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="path" Type="ntext" />
+          <Property Name="noidung1" Type="ntext" />
+          <Property Name="noidung2" Type="ntext" />
+          <Property Name="hienthi" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="tbl_Ournails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hienthi" Type="char" MaxLength="1" />
+          <Property Name="path" Type="ntext" />
+          <Property Name="noidung" Type="ntext" />
+          <Property Name="giamgia" Type="nvarchar" MaxLength="50" />
+          <Property Name="ournails" Type="nvarchar" MaxLength="50" />
+          <Property Name="valid" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_service">
+          <Key>
+            <PropertyRef Name="ma_dv" />
+          </Key>
+          <Property Name="ma_dv" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nameid" Type="nvarchar" MaxLength="50" />
+          <Property Name="path" Type="ntext" />
+          <Property Name="noidung" Type="ntext" />
+          <Property Name="hienthi" Type="char" MaxLength="1" />
+          <Property Name="thutu" Type="int" />
+          <Property Name="class_bg" Type="ntext" />
+          <Property Name="path1" Type="ntext" />
+          <Property Name="noidung1" Type="ntext" />
+          <Property Name="nameid1" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="NailsModelStoreContainer">
+          <EntitySet Name="tb_event" EntityType="Self.tb_event" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_service1" EntityType="Self.tb_service1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_service2" EntityType="Self.tb_service2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_servicedetails" EntityType="Self.tb_servicedetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_about" EntityType="Self.tbl_about" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_aboutus" EntityType="Self.tbl_aboutus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Admin" EntityType="Self.tbl_Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_banner" EntityType="Self.tbl_banner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_contact" EntityType="Self.tbl_contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_gallery" EntityType="Self.tbl_gallery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Ournails" EntityType="Self.tbl_Ournails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_service" EntityType="Self.tbl_service" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_home" EntityType="Self.tbl_home" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tbl_home].[ID] AS [ID], 
+    [tbl_home].[path] AS [path], 
+    [tbl_home].[noidung1] AS [noidung1], 
+    [tbl_home].[noidung2] AS [noidung2], 
+    [tbl_home].[hienthi] AS [hienthi]
+    FROM [dbo].[tbl_home] AS [tbl_home]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NailsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tb_event">
+          <Key>
+            <PropertyRef Name="ma_e" />
+          </Key>
+          <Property Name="ma_e" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ten_e" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="gia_full" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="gia_fill" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="hienthi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="noidung_e" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tieude_e" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tb_service1">
+          <Key>
+            <PropertyRef Name="ma_dvc1" />
+          </Key>
+          <Property Name="ma_dvc1" Type="Int32" Nullable="false" />
+          <Property Name="ten_dvc1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="gia_full" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="gia_fill" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="hienthi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ma_dv" Type="Int32" />
+          <Property Name="noidungdv1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tb_service2">
+          <Key>
+            <PropertyRef Name="ma_dvc2" />
+          </Key>
+          <Property Name="ma_dvc2" Type="Int32" Nullable="false" />
+          <Property Name="ten_dvc2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="gia_full" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="gia_fill" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="hienthi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ma_dv" Type="Int32" />
+          <Property Name="ma_dvc1" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tb_servicedetails">
+          <Key>
+            <PropertyRef Name="ma_dvct" />
+          </Key>
+          <Property Name="ma_dvct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ma_dv" Type="Int32" />
+          <Property Name="gia_dv" Type="Int32" />
+          <Property Name="gia_dv_full" Type="Int32" />
+          <Property Name="gia_dv_fill" Type="Int32" />
+          <Property Name="hienthi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ten_dvct" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ghichu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_about">
+          <Key>
+            <PropertyRef Name="id_about" />
+          </Key>
+          <Property Name="id_about" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hienthi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_aboutus">
+          <Key>
+            <PropertyRef Name="id_aboutus" />
+          </Key>
+          <Property Name="id_aboutus" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="noidungc1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hienthi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="noidungc2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Admin">
+          <Key>
+            <PropertyRef Name="IDService" />
+          </Key>
+          <Property Name="IDService" Type="Int32" Nullable="false" />
+          <Property Name="Service" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Service1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Service2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_banner">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="noidung1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="noidung2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hienthi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_contact">
+          <Key>
+            <PropertyRef Name="id_contact" />
+          </Key>
+          <Property Name="id_contact" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Subject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Massage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_gallery">
+          <Key>
+            <PropertyRef Name="IDGallery" />
+          </Key>
+          <Property Name="IDGallery" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="path1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hienthi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_Ournails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hienthi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="giamgia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ournails" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="valid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_service">
+          <Key>
+            <PropertyRef Name="ma_dv" />
+          </Key>
+          <Property Name="ma_dv" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nameid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hienthi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="thutu" Type="Int32" />
+          <Property Name="class_bg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="path1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="noidung1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="nameid1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_home">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="noidung1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="noidung2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hienthi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="NailsEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_event" EntityType="Self.tb_event" />
+          <EntitySet Name="tb_service1" EntityType="Self.tb_service1" />
+          <EntitySet Name="tb_service2" EntityType="Self.tb_service2" />
+          <EntitySet Name="tb_servicedetails" EntityType="Self.tb_servicedetails" />
+          <EntitySet Name="tbl_about" EntityType="Self.tbl_about" />
+          <EntitySet Name="tbl_aboutus" EntityType="Self.tbl_aboutus" />
+          <EntitySet Name="tbl_Admin" EntityType="Self.tbl_Admin" />
+          <EntitySet Name="tbl_banner" EntityType="Self.tbl_banner" />
+          <EntitySet Name="tbl_contact" EntityType="Self.tbl_contact" />
+          <EntitySet Name="tbl_gallery" EntityType="Self.tbl_gallery" />
+          <EntitySet Name="tbl_Ournails" EntityType="Self.tbl_Ournails" />
+          <EntitySet Name="tbl_service" EntityType="Self.tbl_service" />
+          <EntitySet Name="tbl_home" EntityType="Self.tbl_home" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NailsModelStoreContainer" CdmEntityContainer="NailsEntities1">
+          <EntitySetMapping Name="tb_event">
+            <EntityTypeMapping TypeName="NailsModel.tb_event">
+              <MappingFragment StoreEntitySet="tb_event">
+                <ScalarProperty Name="ma_e" ColumnName="ma_e" />
+                <ScalarProperty Name="ten_e" ColumnName="ten_e" />
+                <ScalarProperty Name="gia_full" ColumnName="gia_full" />
+                <ScalarProperty Name="gia_fill" ColumnName="gia_fill" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="noidung_e" ColumnName="noidung_e" />
+                <ScalarProperty Name="tieude_e" ColumnName="tieude_e" />
+                <ScalarProperty Name="path" ColumnName="path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_service1">
+            <EntityTypeMapping TypeName="NailsModel.tb_service1">
+              <MappingFragment StoreEntitySet="tb_service1">
+                <ScalarProperty Name="ma_dvc1" ColumnName="ma_dvc1" />
+                <ScalarProperty Name="ten_dvc1" ColumnName="ten_dvc1" />
+                <ScalarProperty Name="gia_full" ColumnName="gia_full" />
+                <ScalarProperty Name="gia_fill" ColumnName="gia_fill" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="ma_dv" ColumnName="ma_dv" />
+                <ScalarProperty Name="noidungdv1" ColumnName="noidungdv1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_service2">
+            <EntityTypeMapping TypeName="NailsModel.tb_service2">
+              <MappingFragment StoreEntitySet="tb_service2">
+                <ScalarProperty Name="ma_dvc2" ColumnName="ma_dvc2" />
+                <ScalarProperty Name="ten_dvc2" ColumnName="ten_dvc2" />
+                <ScalarProperty Name="gia_full" ColumnName="gia_full" />
+                <ScalarProperty Name="gia_fill" ColumnName="gia_fill" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="ma_dv" ColumnName="ma_dv" />
+                <ScalarProperty Name="ma_dvc1" ColumnName="ma_dvc1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_servicedetails">
+            <EntityTypeMapping TypeName="NailsModel.tb_servicedetails">
+              <MappingFragment StoreEntitySet="tb_servicedetails">
+                <ScalarProperty Name="ma_dvct" ColumnName="ma_dvct" />
+                <ScalarProperty Name="ma_dv" ColumnName="ma_dv" />
+                <ScalarProperty Name="gia_dv" ColumnName="gia_dv" />
+                <ScalarProperty Name="gia_dv_full" ColumnName="gia_dv_full" />
+                <ScalarProperty Name="gia_dv_fill" ColumnName="gia_dv_fill" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="ten_dvct" ColumnName="ten_dvct" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+                <ScalarProperty Name="path" ColumnName="path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_about">
+            <EntityTypeMapping TypeName="NailsModel.tbl_about">
+              <MappingFragment StoreEntitySet="tbl_about">
+                <ScalarProperty Name="id_about" ColumnName="id_about" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_aboutus">
+            <EntityTypeMapping TypeName="NailsModel.tbl_aboutus">
+              <MappingFragment StoreEntitySet="tbl_aboutus">
+                <ScalarProperty Name="id_aboutus" ColumnName="id_aboutus" />
+                <ScalarProperty Name="noidungc1" ColumnName="noidungc1" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="noidungc2" ColumnName="noidungc2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Admin">
+            <EntityTypeMapping TypeName="NailsModel.tbl_Admin">
+              <MappingFragment StoreEntitySet="tbl_Admin">
+                <ScalarProperty Name="IDService" ColumnName="IDService" />
+                <ScalarProperty Name="Service" ColumnName="Service" />
+                <ScalarProperty Name="Service1" ColumnName="Service1" />
+                <ScalarProperty Name="Service2" ColumnName="Service2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_banner">
+            <EntityTypeMapping TypeName="NailsModel.tbl_banner">
+              <MappingFragment StoreEntitySet="tbl_banner">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="noidung1" ColumnName="noidung1" />
+                <ScalarProperty Name="noidung2" ColumnName="noidung2" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_contact">
+            <EntityTypeMapping TypeName="NailsModel.tbl_contact">
+              <MappingFragment StoreEntitySet="tbl_contact">
+                <ScalarProperty Name="id_contact" ColumnName="id_contact" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Massage" ColumnName="Massage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_gallery">
+            <EntityTypeMapping TypeName="NailsModel.tbl_gallery">
+              <MappingFragment StoreEntitySet="tbl_gallery">
+                <ScalarProperty Name="IDGallery" ColumnName="IDGallery" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="path1" ColumnName="path1" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Ournails">
+            <EntityTypeMapping TypeName="NailsModel.tbl_Ournails">
+              <MappingFragment StoreEntitySet="tbl_Ournails">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="giamgia" ColumnName="giamgia" />
+                <ScalarProperty Name="ournails" ColumnName="ournails" />
+                <ScalarProperty Name="valid" ColumnName="valid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_service">
+            <EntityTypeMapping TypeName="NailsModel.tbl_service">
+              <MappingFragment StoreEntitySet="tbl_service">
+                <ScalarProperty Name="ma_dv" ColumnName="ma_dv" />
+                <ScalarProperty Name="nameid" ColumnName="nameid" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="thutu" ColumnName="thutu" />
+                <ScalarProperty Name="class_bg" ColumnName="class_bg" />
+                <ScalarProperty Name="path1" ColumnName="path1" />
+                <ScalarProperty Name="noidung1" ColumnName="noidung1" />
+                <ScalarProperty Name="nameid1" ColumnName="nameid1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_home">
+            <EntityTypeMapping TypeName="NailsModel.tbl_home">
+              <MappingFragment StoreEntitySet="tbl_home">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="noidung1" ColumnName="noidung1" />
+                <ScalarProperty Name="noidung2" ColumnName="noidung2" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

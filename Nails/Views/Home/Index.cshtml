@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="hb-homeslider" class="hb-homeslider owl-carousel owl-theme img-left hb-haslayout">
+    @foreach (var item in new Nails.Models.NailsEntities1().tbl_banner.Where(q => q.hienthi == "1"))
+    {
+    <div class="item">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="hb-slidercontent-area">
+                        <figure class="hb-sliderimg">
+                            <img src="~/@item.path" alt="image description" class="img-responsive">
+                            <figcaption class="hb-slidercontent">
+                                <h1><span>Rest &amp; Relax</span>Beauty &amp; Spa Salon</h1>
+                                <div class="hb-description">
+                                    <p>@item.noidung1</p>
+                                    <p>@item.noidung2</p>
+                                    @*<p>Enjoy some much needed me-time during a three-hour spa session.</p>*@
+                                </div>
+                                <a href="booking.html" class="hb-btn">request an appointmentaaaaaaaaaaaaaaa</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
+</div>
+<!--************************************
+        Home Slider End
+*************************************-->
