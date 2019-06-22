@@ -1451,13 +1451,13 @@ address {
 }
 
 .hb-breadcrumb {
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  float: right;
-  text-align: right;
-  text-transform: capitalize;
-  font: 14px/44px 'Poppins', Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #c0bfda;
+    float: right;
+    text-align: right;
+    text-transform: capitalize;
+    font: 14px/44px 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 .hb-breadcrumb li {
@@ -1485,10 +1485,10 @@ address {
   display: none;
 }
 
-.hb-breadcrumb li a {
-  display: block;
-  color: #fff;
-}
+    .hb-breadcrumb li a {
+        display: block;
+        color: #c0bfda;
+    }
 
 .hb-twoheading {
   font-size: 24px;
@@ -8017,9 +8017,11 @@ body {
 			Inner banner Style					
 ============================================= */
 .hb-innerbanner {
-  background-size: cover;
-  background-image: url("../images/innerbanner-bg.html");
-  background-repeat: no-repeat;
+    background-size: cover;
+    /*background-image: url("../images/innerbanner-bg.html");*/
+    background-image: url("../images/banner-sv/sv06.jpg");
+    
+    background-repeat: no-repeat;
 }
 
 .hb-innerbanner-area {
@@ -8034,14 +8036,14 @@ body {
   width: 100%;
 }
 
-.hb-bannarheading h1 {
-  font-size: 36px;
-  line-height: 39px;
-  color: #fff;
-  font-weight: 500;
-  margin: 0 0 15px;
-  text-transform: capitalize;
-}
+    .hb-bannarheading h1 {
+        font-size: 36px;
+        line-height: 39px;
+        color: #c0bfda;
+        font-weight: 500;
+        margin: 0 0 15px;
+        text-transform: capitalize;
+    }
 
 /* =============================================
 			Breadcrumb Style					

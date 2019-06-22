@@ -187,6 +187,7 @@
       <DependentUpon>ModelNails01.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ContactController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -234,9 +235,25 @@
     <Content Include="fonts\themify9f24.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="html\giftcertificates.html" />
     <Content Include="images\404-icon.png" />
     <Content Include="images\aboutus-img.jpg" />
+    <Content Include="images\about\about-img-00.jpg" />
+    <Content Include="images\about\about-img-01.jpg" />
+    <Content Include="images\about\about-img-03.jpg" />
+    <Content Include="images\about\about-img-04.jpg" />
+    <Content Include="images\about\about01.jpg" />
     <Content Include="images\appointment-img.jpg" />
+    <Content Include="images\banner-sv\sv01.jpg" />
+    <Content Include="images\banner-sv\sv02.jpg" />
+    <Content Include="images\banner-sv\sv03.jpg" />
+    <Content Include="images\banner-sv\sv04.jpg" />
+    <Content Include="images\banner-sv\sv05.jpg" />
+    <Content Include="images\banner-sv\sv06.jpg" />
+    <Content Include="images\banner\imgbanner04.jpg" />
+    <Content Include="images\banner\imgbanner05.jpg" />
+    <Content Include="images\banner\imgbanner07.jpg" />
+    <Content Include="images\banner\imgbanner08.jpg" />
     <Content Include="images\blog-fullimg-01.jpg" />
     <Content Include="images\blog-fullimg-02.jpg" />
     <Content Include="images\blog-fullimg-03.jpg" />
@@ -282,10 +299,14 @@
     <Content Include="images\img3.png" />
     <Content Include="images\img4.png" />
     <Content Include="images\innerbanner-bg.html" />
-    <Content Include="images\logo.png" />
     <Content Include="images\logo\logo21.png" />
     <Content Include="images\logo\logo3.png" />
     <Content Include="images\logo\logoico.ico" />
+    <Content Include="images\ourservice\services01.jpg" />
+    <Content Include="images\ourservice\services02.jpg" />
+    <Content Include="images\ourservice\services03.jpg" />
+    <Content Include="images\ourservice\services04.jpg" />
+    <Content Include="images\ourservice\services05.jpg" />
     <Content Include="images\paradise-img.jpg" />
     <Content Include="images\post-img01.jpg" />
     <Content Include="images\post-img02.jpg" />
@@ -367,12 +388,12 @@
     <Content Include="images\whychooseus-img.jpg" />
     <Content Include="images\whychooseus-img02.png" />
     <Content Include="images\whychooseus-img03.png" />
-    <Content Include="images\widget-img01.jpg" />
-    <Content Include="images\widget-img02.jpg" />
-    <Content Include="images\widget-img03.jpg" />
-    <Content Include="images\widget-img04.jpg" />
-    <Content Include="images\widget-img05.jpg" />
-    <Content Include="images\widget-img06.jpg" />
+    <Content Include="images\wid\flickr-img-02.jpg" />
+    <Content Include="images\wid\flickr-img-04.jpg" />
+    <Content Include="images\wid\flickr-img-05.jpg" />
+    <Content Include="images\wid\flickr-img-07.jpg" />
+    <Content Include="images\wid\flickr-img-10.jpg" />
+    <Content Include="images\wid\flickr-img-12.jpg" />
     <Content Include="js\appear.js" />
     <Content Include="js\countdown.js" />
     <Content Include="js\countTo.js" />
@@ -451,9 +472,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\service\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

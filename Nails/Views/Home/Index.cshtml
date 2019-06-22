@@ -1,35 +1,776 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
+
 <div id="hb-homeslider" class="hb-homeslider owl-carousel owl-theme img-left hb-haslayout">
     @foreach (var item in new Nails.Models.NailsEntities1().tbl_banner.Where(q => q.hienthi == "1"))
     {
-    <div class="item">
+        <div class="item">
+            @*<img src="~/@item.path" alt="image description" class="img-responsive">*@
+            <div class="container">
+                <div class="row">
+
+                        <div class="col-xs-12">
+
+                            <div class="hb-slidercontent-area">
+                                <img src="~/@item.path" alt="image description" class="img-responsive">
+                                @*<figcaption class="hb-slidercontent">
+
+                                    <h1><span>Rest &amp; Relax</span>Beauty &amp; Spa Salon</h1>
+                                    <div class="hb-description">
+
+                                        <p>@item.noidung1</p>
+                                        <p>Enjoy some much needed me-time during a three-hour spa session.</p>
+                                    </div>
+                                    <a href="booking.html" class="hb-btn">request an appointment</a>
+                                </figcaption>*@
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    }
+</div>
+<!--Home Slider End-->
+<main id="hb-main" class="hb-main hb-haslayout">
+    <!--************************************
+                Services Start
+    *************************************-->
+    <section id="hb-services" class="hb-services ver-4 v2 hb-sectionspace hb-haslayout">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">
-                    <div class="hb-slidercontent-area">
-                        <figure class="hb-sliderimg">
-                            <img src="~/@item.path" alt="image description" class="img-responsive">
-                            <figcaption class="hb-slidercontent">
-                                <h1><span>Rest &amp; Relax</span>Beauty &amp; Spa Salon</h1>
+                <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
+                    <div class="hb-sectionhead mb-50">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                <span>Welcome to</span>
+                                SweetNailsSpa
+                            </h2>
+                        </div>
+                        <div class="hb-headcontent">
+                            <h2>You will like to look like goddes every day!</h2>
+                            <div class="hb-description">
+                                <p>We have a very large selections of gel colors such as OPI, GELISH, CHINA GLAZE, KIARASKY, DAISY DND, CUCCIO, and SHELLAC to pick from. we are sure we can accomidate types of taste and preferance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hb-servicesslider" class="hb-servicesslider hb-haslayout owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="hb-servicebox bg-grey sm-round">
+                            <span class="price font-arizonia">$25.99</span>
+                            <figure class="hb-serviceimg">
+                                <img src="~/images/services-img01.jpg" alt="images description" class="img-responsive">
+                                <figcaption class="hb-imagecontent">
+                                    <a type="submit" class="hb-btn">Book Now</a>
+                                </figcaption>
+                            </figure>
+                            <div class="hb-servicecontent">
+                                <h3 class="hb-headingtree">Full-body Massages</h3>
                                 <div class="hb-description">
-                                    <p>@item.noidung1</p>
-                                    <p>@item.noidung2</p>
-                                    @*<p>Enjoy some much needed me-time during a three-hour spa session.</p>*@
+                                    <p>Provides innovative bodywork and geared toward the needs of athletics</p>
                                 </div>
-                                <a href="booking.html" class="hb-btn">request an appointmentaaaaaaaaaaaaaaa</a>
-                            </figcaption>
-                        </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="hb-servicebox bg-grey sm-round">
+                            <span class="price font-arizonia">$35.99</span>
+                            <figure class="hb-serviceimg">
+                                <img src="~/images/services-img02.jpg" alt="images description" class="img-responsive">
+                                <figcaption class="hb-imagecontent">
+                                    <a type="submit" class="hb-btn">Book Now</a>
+                                </figcaption>
+                            </figure>
+                            <div class="hb-servicecontent">
+                                <h3 class="hb-headingtree">Aromatherapy</h3>
+                                <div class="hb-description">
+                                    <p>Provides innovative bodywork and geared toward the needs of athletics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="hb-servicebox bg-grey sm-round">
+                            <span class="price font-arizonia">$20.99</span>
+                            <figure class="hb-serviceimg">
+                                <img src="~/images/services-img03.jpg" alt="images description" class="img-responsive">
+                                <figcaption class="hb-imagecontent">
+                                    <a type="submit" class="hb-btn">Book Now</a>
+                                </figcaption>
+                            </figure>
+                            <div class="hb-servicecontent">
+                                <h3 class="hb-headingtree">Facial Massages</h3>
+                                <div class="hb-description">
+                                    <p>Provides innovative bodywork and geared toward the needs of athletics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="hb-servicebox bg-grey sm-round">
+                            <span class="price font-arizonia">$30.99</span>
+                            <figure class="hb-serviceimg">
+                                <img src="~/images/services-img04.jpg" alt="images description" class="img-responsive">
+                                <figcaption class="hb-imagecontent">
+                                    <a type="submit" class="hb-btn">Book Now</a>
+                                </figcaption>
+                            </figure>
+                            <div class="hb-servicecontent">
+                                <h3 class="hb-headingtree">Body Treatments</h3>
+                                <div class="hb-description">
+                                    <p>Provides innovative bodywork and geared toward the needs of athletics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="hb-servicebox bg-grey sm-round">
+                            <span class="price">$20.99</span>
+                            <figure class="hb-serviceimg">
+                                <img src="~/images/services-img03.jpg" alt="images description" class="img-responsive">
+                                <figcaption class="hb-imagecontent">
+                                    <a type="submit" class="hb-btn">Book Now</a>
+                                </figcaption>
+                            </figure>
+                            <div class="hb-servicecontent">
+                                <h3 class="hb-headingtree">Facial Massages</h3>
+                                <div class="hb-description">
+                                    <p>Provides innovative bodywork and geared toward the needs of athletics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="hb-servicebox bg-grey sm-round">
+                            <span class="price">$30.99</span>
+                            <figure class="hb-serviceimg">
+                                <img src="~/images/services-img04.jpg" alt="images description" class="img-responsive">
+                                <figcaption class="hb-imagecontent">
+                                    <a type="submit" class="hb-btn">Book Now</a>
+                                </figcaption>
+                            </figure>
+                            <div class="hb-servicecontent">
+                                <h3 class="hb-headingtree">Body Treatments</h3>
+                                <div class="hb-description">
+                                    <p>Provides innovative bodywork and geared toward the needs of athletics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hb-appointment" class="hb-appointment v4 hb-sectionspace hb-haslayout bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-5">
+                    <figure class="hb-appointmentimg">
+                        <img src="~/images/about/about01.jpg" alt="images description">
+                        
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7">
+                    <div class="hb-sectionhead">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                <span>SweetNailsSpa</span>
+                                About Us
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="hb-appointmentcontent">
+                        @*<h3>Want to Make a Booking or Have a Question?</h3>*@
+                        <div class="hb-description">
+                            <p> Expect ans awakening of the senses. An inner feeling of well-being.<span> We invite you to experience and enjoy our extensive menu of wellness treatment for men and women. Our qualified, professional technicians deliver the highest moral and ethical standard to ensure a safe and healthy spa experience.</span></p>
+                        </div>
+                        <div class="hb-btnarea">
+                            <a href="booking.html" class="hb-btn">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************
+                Appointment End
+    *************************************-->
+    <section id="hb-gallery" class="hb-gallery v2 v4 hb-sectionspace hb-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
+                    <div class="hb-sectionhead mb-50">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                <span>Spa Center</span>
+                                Our Gallery
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xs-12">
+                    <div class="hb-gallery-area">
+                        <div class="hb-portfolio-head hb-haslayout">
+                            <ul id="hb-filterbale-nav" class="hb-filterbale-nav option-set">
+                                <li><a class="active" data-filter="*" href="javascript:void(0);">ALL GALLERY</a></li>
+                                <li><a data-filter=".massage" href="javascript:void(0);">MASSAGE</a></li>
+                                <li><a data-filter=".skincare" href="javascript:void(0);">SKIN CARE</a></li>
+                                <li><a data-filter=".haircut" href="javascript:void(0);">HAIR CUT</a></li>
+                                <li><a data-filter=".nailcare" href="javascript:void(0);">NAIL CARE</a></li>
+                                <li><a data-filter=".beautyspa" href="javascript:void(0);">BEAUTY SPA</a></li>
+                            </ul>
+                        </div>
+                        <div id="filter-masonry" class="hb-portfolio-content hb-haslayout">
+                            <div class="masonry-grid massage">
+                                <div class="hb-project">
+                                    <figure class="hb-galleryimg">
+                                        <img src="~/images/gallery-img14.jpg" alt="images description">
+                                        <figcaption class="hb-gallerycontent">
+                                            <ul class="list-unstyled hb-roundicon">
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover1"><i class="fas fa-arrows-alt"></i></a></li>
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover2"><i class="fas fa-link"></i></a></li>
+                                            </ul>
+                                            <h3>Full-body Massages</h3>
+                                            <span>08 Mar 2017</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="masonry-grid skincare">
+                                <div class="hb-project">
+                                    <figure class="hb-galleryimg">
+                                        <img src="~/images/gallery-img16.jpg" alt="images description">
+                                        <figcaption class="hb-gallerycontent">
+                                            <ul class="list-unstyled hb-roundicon">
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover1"><i class="fas fa-arrows-alt"></i></a></li>
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover2"><i class="fas fa-link"></i></a></li>
+                                            </ul>
+                                            <h3>Full-body Massages</h3>
+                                            <span>08 Mar 2017</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="masonry-grid haircut">
+                                <div class="hb-project">
+                                    <figure class="hb-galleryimg">
+                                        <img src="~/images/gallery-img17.jpg" alt="images description">
+                                        <figcaption class="hb-gallerycontent">
+                                            <ul class="list-unstyled hb-roundicon">
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover1"><i class="fas fa-arrows-alt"></i></a></li>
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover2"><i class="fas fa-link"></i></a></li>
+                                            </ul>
+                                            <h3>Full-body Massages</h3>
+                                            <span>08 Mar 2017</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="masonry-grid nailcare">
+                                <div class="hb-project">
+                                    <figure class="hb-galleryimg">
+                                        <img src="~/images/gallery-img19.jpg" alt="images description">
+                                        <figcaption class="hb-gallerycontent">
+                                            <ul class="list-unstyled hb-roundicon">
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover1"><i class="fas fa-arrows-alt"></i></a></li>
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover2"><i class="fas fa-link"></i></a></li>
+                                            </ul>
+                                            <h3>Full-body Massages</h3>
+                                            <span>08 Mar 2017</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="masonry-grid beautyspa">
+                                <div class="hb-project">
+                                    <figure class="hb-galleryimg">
+                                        <img src="~/images/gallery-img18.jpg" alt="images description">
+                                        <figcaption class="hb-gallerycontent">
+                                            <ul class="list-unstyled hb-roundicon">
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover1"><i class="fas fa-arrows-alt"></i></a></li>
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover2"><i class="fas fa-link"></i></a></li>
+                                            </ul>
+                                            <h3>Full-body Massages</h3>
+                                            <span>08 Mar 2017</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="masonry-grid massage">
+                                <div class="hb-project">
+                                    <figure class="hb-galleryimg">
+                                        <img src="~/images/gallery-img15.jpg" alt="images description">
+                                        <figcaption class="hb-gallerycontent">
+                                            <ul class="list-unstyled hb-roundicon">
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover1"><i class="fas fa-arrows-alt"></i></a></li>
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover2"><i class="fas fa-link"></i></a></li>
+                                            </ul>
+                                            <h3>Full-body Massages</h3>
+                                            <span>08 Mar 2017</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="hb-btn text-uppercase">view all gallary</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************
+                Our Gallery End
+    *************************************-->
+    <!--************************************
+                Testimonial Start
+    *************************************-->
+    <div id="hb-testimonial" class="hb-testimonial v4 hb-sectionspace hb-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class=" col-sm-12 col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+                    <div id="hb-testimonialslider" class="hb-testimonialslider owl-carousel hb-haslayout">
+                        <div class="item">
+                            <div class="hb-testimonialcontent">
+                                <figure class="pos-img"></figure>
+                                <h2>Ollie Schneider</h2>
+                                <div class="hb-description">
+                                    <p>Had a massage at deep by the training student ,very professional ,very relaxing and felt very comfortable throughout the treatment ,the salon is always immaculately clean ,friendly and I would recommend this salon 100%</p>
+                                </div>
+                                <div class="hb-uthername">
+                                    <span class="hb-stars"><span></span></span>
+                                </div>
+                                <span>Ollie Schneider - CEO Deercreative</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="hb-testimonialcontent">
+                                <figure class="pos-img"></figure>
+                                <h2>Ollie Schneider</h2>
+                                <div class="hb-description">
+                                    <p>Had a massage at deep by the training student ,very professional ,very relaxing and felt very comfortable throughout the treatment ,the salon is always immaculately clean ,friendly and I would recommend this salon 100%</p>
+                                </div>
+                                <div class="hb-uthername">
+                                    <span class="hb-stars"><span></span></span>
+                                </div>
+                                <span>Ollie Schneider - CEO Deercreative</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="hb-testimonialcontent">
+                                <figure class="pos-img"></figure>
+                                <h2>Ollie Schneider</h2>
+                                <div class="hb-description">
+                                    <p>Had a massage at deep by the training student ,very professional ,very relaxing and felt very comfortable throughout the treatment ,the salon is always immaculately clean ,friendly and I would recommend this salon 100%</p>
+                                </div>
+                                <div class="hb-uthername">
+                                    <span class="hb-stars"><span></span></span>
+                                </div>
+                                <span>Ollie Schneider - CEO Deercreative</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="hb-testimonialcontent">
+                                <figure class="pos-img"></figure>
+                                <h2>Ollie Schneider</h2>
+                                <div class="hb-description">
+                                    <p>Had a massage at deep by the training student ,very professional ,very relaxing and felt very comfortable throughout the treatment ,the salon is always immaculately clean ,friendly and I would recommend this salon 100%</p>
+                                </div>
+                                <div class="hb-uthername">
+                                    <span class="hb-stars"><span></span></span>
+                                </div>
+                                <span>Ollie Schneider - CEO Deercreative</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="hb-testimonialcontent">
+                                <figure class="pos-img"></figure>
+                                <h2>Ollie Schneider</h2>
+                                <div class="hb-description">
+                                    <p>Had a massage at deep by the training student ,very professional ,very relaxing and felt very comfortable throughout the treatment ,the salon is always immaculately clean ,friendly and I would recommend this salon 100%</p>
+                                </div>
+                                <div class="hb-uthername">
+                                    <span class="hb-stars"><span></span></span>
+                                </div>
+                                <span>Ollie Schneider - CEO Deercreative</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="hb-testimonialcontent">
+                                <figure class="pos-img"></figure>
+                                <h2>Ollie Schneider</h2>
+                                <div class="hb-description">
+                                    <p>Had a massage at deep by the training student ,very professional ,very relaxing and felt very comfortable throughout the treatment ,the salon is always immaculately clean ,friendly and I would recommend this salon 100%</p>
+                                </div>
+                                <div class="hb-uthername">
+                                    <span class="hb-stars"><span></span></span>
+                                </div>
+                                <span>Ollie Schneider - CEO Deercreative</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    }
+    <!--************************************
+                Testimonial End
+    *************************************-->
+    <!--************************************
+                Pricingplan Start
+    *************************************-->
+    <section id="hb-pricingplan" class="hb-pricingplan v4 hb-sectionspace hb-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-sm-offset-0 col-md-12">
+                    <div class="hb-sectionhead">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                <span>Spa Center</span>
+                                Our Pricing
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <ul class="list-unstyled tab-list">
+                        <li class="active"><a href="#tab01" role="presentation" role="tab" data-toggle="tab">Family Pack</a></li>
+                        <li><a href="#tab02" role="presentation" role="tab" data-toggle="tab">Medium Pack</a></li>
+                        <li><a href="#tab03" role="presentation" role="tab" data-toggle="tab">PreMium Pack</a></li>
+                        <li><a href="#tab04" role="presentation" role="tab" data-toggle="tab">Untimate Pack</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab01" class="tab-pane active" role="tabpanel">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Nail Cutting</h3>
+                                            <span class="price font-arizonia">$31.18</span>
+                                        </div>
+                                        <p>I have a professional massage therapist for the last 9 years</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Spa Therapy</h3>
+                                            <span class="price font-arizonia">$15.25</span>
+                                        </div>
+                                        <p>They’re incredibly harmful to the environment to humans.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder active">
+                                        <div class="header">
+                                            <h3>Cream Pedicure</h3>
+                                            <span class="price font-arizonia">$18.99</span>
+                                        </div>
+                                        <p>We provide all amenities and basic cosmetics at the spa.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Body Massage </h3>
+                                            <span class="price font-arizonia">$11.65</span>
+                                        </div>
+                                        <p>I've a professional massage therapist for the last 9 years</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Therapeutic Pedicure</h3>
+                                            <span class="price font-arizonia">$22.46</span>
+                                        </div>
+                                        <p>They’re incredibly harmful to the environment to humans.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Manicure</h3>
+                                            <span class="price font-arizonia">$26.17</span>
+                                        </div>
+                                        <p>We provide all amenities and basic cosmetics at the spa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab02" class="tab-pane" role="tabpanel">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Nail Cutting</h3>
+                                            <span class="price font-arizonia">$31.18</span>
+                                        </div>
+                                        <p>I have a professional massage therapist for the last 9 years</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder active">
+                                        <div class="header">
+                                            <h3>Spa Therapy</h3>
+                                            <span class="price font-arizonia">$15.25</span>
+                                        </div>
+                                        <p>They’re incredibly harmful to the environment to humans.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Therapeutic Pedicure</h3>
+                                            <span class="price font-arizonia">$22.46</span>
+                                        </div>
+                                        <p>They’re incredibly harmful to the environment to humans.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Manicure</h3>
+                                            <span class="price font-arizonia">$26.17</span>
+                                        </div>
+                                        <p>We provide all amenities and basic cosmetics at the spa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab03" class="tab-pane" role="tabpanel">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Nail Cutting</h3>
+                                            <span class="price font-arizonia">$31.18</span>
+                                        </div>
+                                        <p>I have a professional massage therapist for the last 9 years</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Spa Therapy</h3>
+                                            <span class="price font-arizonia">$15.25</span>
+                                        </div>
+                                        <p>They’re incredibly harmful to the environment to humans.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder active">
+                                        <div class="header">
+                                            <h3>Cream Pedicure</h3>
+                                            <span class="price font-arizonia">$18.99</span>
+                                        </div>
+                                        <p>We provide all amenities and basic cosmetics at the spa.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Body Massage </h3>
+                                            <span class="price font-arizonia">$11.65</span>
+                                        </div>
+                                        <p>I've a professional massage therapist for the last 9 years</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Therapeutic Pedicure</h3>
+                                            <span class="price font-arizonia">$22.46</span>
+                                        </div>
+                                        <p>They’re incredibly harmful to the environment to humans.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab04" class="tab-pane" role="tabpanel">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Nail Cutting</h3>
+                                            <span class="price font-arizonia">$31.18</span>
+                                        </div>
+                                        <p>I have a professional massage therapist for the last 9 years</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder active">
+                                        <div class="header">
+                                            <h3>Spa Therapy</h3>
+                                            <span class="price font-arizonia">$15.25</span>
+                                        </div>
+                                        <p>They’re incredibly harmful to the environment to humans.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Therapeutic Pedicure</h3>
+                                            <span class="price font-arizonia">$22.46</span>
+                                        </div>
+                                        <p>They’re incredibly harmful to the environment to humans.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="txt-holder">
+                                        <div class="header">
+                                            <h3>Manicure</h3>
+                                            <span class="price font-arizonia">$26.17</span>
+                                        </div>
+                                        <p>We provide all amenities and basic cosmetics at the spa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************
+                Pricingplan End
+    *************************************-->
+    <!--************************************
 
-</div>
-<!--************************************
-        Home Slider End
-*************************************-->
+    <!--************************************
+                Blog Start
+    *************************************-->
+    <section id="hb-blog" class="hb-blog v4 hb-sectionspace hb-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
+                    <div class="hb-sectionhead">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                <span>Services Us</span>
+                                Latest News &amp; Events
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="hb-post-area">
+                    @*<div class="col-xs-12 col-sm-6 col-sm-6">
+                        @foreach (var item in new Nails.Models.NailsEntities1().tbl_Ournails.Where(q => q.hienthi == "1"))
+                        {
+                        <article class="hb-post">
+                            <figure class="hb-postimage">
+                                <a href="bloggrid-sidebar.html"><img src="~/@item.path" alt="image description"></a>
+                            </figure>
+                            <div class="hb-postcontent">
+                                <a href="bloggrid-sidebar.html" class="hb-postcategory">News</a>
+                                <div class="hb-posttitle">
+                                    <h3><a href="bloggrid-sidebar.html">@item.ournails</a></h3>
+                                </div>
+                                <div class="hb-postmeta">
+                                    <span>Gary Coleman | 21 Mar 2017</span>
+                                </div>
+                            </div>
+                        </article>
+                        }
+                    </div>*@
+                    <div class="col-xs-12 col-sm-6">
+                        <article class="hb-post">
+                            <figure class="hb-postimage">
+                                <a href="bloggrid-sidebar.html"><img src="~/images/ourservice/services01.jpg" alt="image description"></a>
+                                
+                            </figure>
+                            <div class="hb-postcontent">
+                                <a href="bloggrid-sidebar.html" class="hb-postcategory">EVENTS</a>
+                                <div class="hb-posttitle">
+                                    <h3><a href="bloggrid-sidebar.html">Hotstone for all pedicure service</a></h3>
+                                </div>
+                                <div class="hb-postmeta">
+                                    <span>Gary Coleman | 21 Mar 2019</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <article class="hb-post">
+                            <figure class="hb-postimage">
+                                <a href="bloggrid-sidebar.html"><img src="~/images/ourservice/services02.jpg" alt="image description"></a>
+                               
+                            </figure>
+                            <div class="hb-postcontent">
+                                <a href="bloggrid-sidebar.html" class="hb-postcategory">EVENTS</a>
+                                <div class="hb-posttitle">
+                                    <h3><a href="bloggrid-sidebar.html">FULLSET UV GET ARCRYLIC</a></h3>
+                                </div>
+                                <div class="hb-postmeta">
+                                    <span>Gary Coleman | 21 Mar 2019</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <article class="hb-post">
+                            <figure class="hb-postimage">
+                                <a href="bloggrid-sidebar.html"><img src="~/images/ourservice/services03.jpg" alt="image description"></a>
+                            </figure>
+                            <div class="hb-postcontent">
+                                <a href="bloggrid-sidebar.html" class="hb-postcategory">EVENTS</a>
+                                <div class="hb-posttitle">
+                                    <h3><a href="bloggrid-sidebar.html">GEL/SHELLAC MANI-PEDI</a></h3>
+                                </div>
+                                <div class="hb-postmeta">
+                                    <span>Gary Coleman | 21 Mar 2019</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <article class="hb-post">
+                            <figure class="hb-postimage">
+                                <a href="bloggrid-sidebar.html"><img src="~/images/ourservice/services04.jpg" alt="image description"></a>
+                            </figure>
+                            <div class="hb-postcontent">
+                                <a href="bloggrid-sidebar.html" class="hb-postcategory">EVENTS</a>
+                                <div class="hb-posttitle">
+                                    <h3><a href="bloggrid-sidebar.html">WAXING SERVICE</a></h3>
+                                </div>
+                                <div class="hb-postmeta">
+                                    <span>Gary Coleman | 21 Mar 2019</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <article class="hb-post">
+                            <figure class="hb-postimage">
+                                <a href="bloggrid-sidebar.html"><img src="~/images/ourservice/services05.jpg" alt="image description"></a>
+                            </figure>
+                            <div class="hb-postcontent">
+                                <a href="bloggrid-sidebar.html" class="hb-postcategory">EVENTS</a>
+                                <div class="hb-posttitle">
+                                    <h3><a href="bloggrid-sidebar.html">EYELASH EXTENSION</a></h3>
+                                </div>
+                                <div class="hb-postmeta">
+                                    <span>Gary Coleman | 21 Mar 2019</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************
+                Blog End
+    *************************************-->
+</main>
+
+
+
